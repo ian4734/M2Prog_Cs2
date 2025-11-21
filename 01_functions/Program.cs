@@ -11,21 +11,15 @@ internal class Program
         "Has someone caught you dancing in front of the mirror?"
     };
 
-     internal string GetRandomVraag()
-    {
-        Random random = new Random();
-        int Random = random.Next(vragen.Length);
-        return vragen[Random];
-    }
-    internal void Run()
-    
 
-    
+    internal void Run()
     {
         Console.WriteLine("Hoe laat is het");
         string antwoord = Console.ReadLine();
 
         Console.WriteLine(antwoord);
+        string vraag0 = GetRandomVraag();
+        Console.WriteLine(vraag0);
     }
     static void Main(string[] args)
     {
@@ -34,7 +28,12 @@ internal class Program
             string antwoord6 = program.Vraag6();
             Console.WriteLine(antwoord6);
         }
-
+ internal string GetRandomVraag()
+    {
+        Random random = new Random();
+        int Random = random.Next(vragen.Length);
+        return vragen[Random];
+    }
     internal void Vraag1()
     {
         Console.WriteLine("how long do you think you would survive in a zombie apocalypse?");
