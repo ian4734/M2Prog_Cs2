@@ -2,18 +2,38 @@
 
 internal class Program
 {
-    static void Main(string[] args)
+    string[] vragen = new string[]
     {
-        Program program = new Program(); // het maken van een void variable. het return type van de functio is de void.
-        program.Run();  // de variable is een void. het is een empty type variable
+        "how long do you think you would survive in a zombie apocalypse?",
+        "What secret conspiracy would you like to actually start letting other people know?",
+        "If you can still remember, what are your funniest childhood memories?",
+        "Why do round pizzas come in square boxes?",
+        "Has someone caught you dancing in front of the mirror?"
+    };
+
+     internal string GetRandomVraag()
+    {
+        Random random = new Random();
+        int Random = random.Next(vragen.Length);
+        return vragen[Random];
     }
     internal void Run()
+    
+
+    
     {
         Console.WriteLine("Hoe laat is het");
         string antwoord = Console.ReadLine();
 
         Console.WriteLine(antwoord);
     }
+    static void Main(string[] args)
+    {
+            Program program = new Program(); // het maken van een void variable. het return type van de functio is de void.
+            program.Run();  // de variable is een void. het is een empty type variable
+            string antwoord6 = program.Vraag6();
+            Console.WriteLine(antwoord6);
+        }
 
     internal void Vraag1()
     {
@@ -31,15 +51,16 @@ internal class Program
         Console.WriteLine(antwoord);
 
     }
-     internal void Vraag3()
+    internal void Vraag3()
     {
         Console.WriteLine("If you can still remember, what are your funniest childhood memories?");
         string antwoord = Console.ReadLine();
 
         Console.WriteLine(antwoord);
 
-    
-    } internal void Vraag4()
+
+    }
+    internal void Vraag4()
     {
         Console.WriteLine("Why do round pizzas come in square boxes?");
         string antwoord = Console.ReadLine();
@@ -53,4 +74,14 @@ internal class Program
         string antwoord = Console.ReadLine();
         Console.WriteLine(antwoord);
     }
+    internal string Vraag6()
+    {
+        Console.WriteLine("");
+        string antwoord = Console.ReadLine();
+
+
+        return antwoord;
+
+    }
 }
+
