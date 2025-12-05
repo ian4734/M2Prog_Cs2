@@ -7,6 +7,20 @@ class Quiz
     {
         vragen = new QuizVraag[aantalVragen];
     }
-    Quiz quiz = new Quiz(10);
-       
+    
+
+    void voegVraagToe(QuizVraag vraag, int index)
+    {
+        vragen[index] = vraag;
+    }
+    void voegVraagToeOpIndex(int index, string vraag, string antwoord)
+    {
+        QuizVraag vraag = new QuizVraag(vraag, antwoord);
+        voegVraagToe(vraag, index);
+    }
+    
+      
+    
+    
 }
+
