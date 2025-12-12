@@ -40,18 +40,41 @@ class Program
     {
         Program program = new Program();
         program.run();
-
+       
     }
     internal void run()
     {
+        reviews.Remove(342.97);
+       
         characterlist.Add("odin");
         foreach (string item in characters)
         {
             characterlist.Add(item);
         }
-       foreach (string item in characters)
-       {
-           Console.WriteLine(item);
-       }
+        foreach (string item in characters)
+        {
+            Console.WriteLine(item);
+        }
+
+
+        foreach (double item in reviews)
+        {
+            Console.WriteLine(item);
+        }
+        
+    }
+
+
+    List<double> reviews = new List<double>() { 9.99, 4.68, 342.97, 12.2 };
+
+    List<double> reviews = new List<int>() { 9.99, 4.68, 342.97, 12.2 };
+    internal void RemoveAt(int index)
+    {
+        reviews.RemoveAt(12.2);
     }
 }
+    
+       
+    
+
+    
